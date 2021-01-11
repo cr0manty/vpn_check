@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - vpn_check (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - vpn_check (from `.symlinks/plugins/vpn_check/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  vpn_check:
+    :path: ".symlinks/plugins/vpn_check/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  vpn_check: 6a654c609762ddf964f2ba78edeffe71b490ae44
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0
