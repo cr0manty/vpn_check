@@ -6,9 +6,12 @@ import java.util.*
 class VPNChecker {
     companion object {
         fun isVpnActive(): Boolean {
+            val vpnProtocolsKeysIdentifiers = arrayOf("tap", "tun", "ppp", "ipsec", "utun")
             try {
                 for (networkInterface in Collections.list(NetworkInterface.getNetworkInterfaces())) {
-                    if (networkInterface.isUp && (networkInterface.name.contains("ppp") || networkInterface.name.contains("tun"))) return true
+                    for (protocolId in vpnProtocolsKeysIdentifiers) {
+                        if (networkInterface.isUp && networkInterface.name.startsWith(protocolId)) return true
+                    }
                 }
             } catch (ex: Exception) {
                 return false

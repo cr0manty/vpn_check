@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('is Active vpn example app'),
+          title: const Text('VPN Activity example app'),
         ),
         body: Center(
           child: Text('VPN active: $_isVpnActive\n'),
