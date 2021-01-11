@@ -1,6 +1,6 @@
 # vpn_check
 
-get vpn active status for Android, iOS, MacOS, Windows, Linux
+get vpn active status for Android, iOS
 
 ## Getting Started
 
@@ -15,7 +15,4 @@ bool isVpnActive = await VPNCheck.isVpnActive;
 
 - [x] Android
 - [x] IOS
-- [ ] MacOS
-- [ ] Windows
-- [ ] Linux
 
