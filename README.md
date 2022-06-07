@@ -9,7 +9,13 @@ a simple usage example:
 ```
 import 'package:vpn_check/vpn_check.dart';
 
-bool isVpnActive = await VPNCheck.isVpnActive;
+bool isVpnActive = false;
+
+try {
+    isVpnActive = await VPNCheck.isVpnActive;
+} on VPNUnhandledException catch (e) {
+    print(e)
+}
 ```
 ## Support Platform
 
