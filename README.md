@@ -1,10 +1,10 @@
 # vpn_check
 
-get vpn active status for Android, iOS
+Get vpn active status for Android, iOS
 
 ## Getting Started
 
-a simple usage example:
+A simple usage example:
 
 ```
 import 'package:vpn_check/vpn_check.dart';
