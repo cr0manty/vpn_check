@@ -14,21 +14,42 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isVpnActive;
+  late StreamSubscription<bool> _streamSubscription;
+  final vpnChecker = VPNChecker();
+  bool? _isVpnActive;
 
   @override
   void initState() {
     super.initState();
     initPlatformState();
+    _streamSubscription = vpnChecker.vpnActivityStream.listen(
+      (isActive) {
+        _isVpnActive = isActive;
+
+        if (mounted) ;
+        setState(() {});
+      },
+      onError: (error, stack) {
+        print(error);
+      },
+      cancelOnError: false,
+    );
   }
 
   Future<void> initPlatformState() async {
     try {
-      _isVpnActive = await VPNCheck.isVpnActive;
+      _isVpnActive = await vpnChecker.isVPNEnabled();
       if (!mounted) return;
 
       setState(() {});
     } on PlatformException {}
+  }
+
+  @override
+  void dispose() {
+    _streamSubscription.cancel();
+    vpnChecker.dispose();
+    super.dispose();
   }
 
   @override

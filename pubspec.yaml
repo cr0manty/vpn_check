@@ -1,20 +1,23 @@
 name: vpn_check
 description: Plugin used for get vpn active status for Android and iOS
-version: 0.1.1
+version: 0.2.0
 
 homepage: https://github.com/cr0manty/vpn_check
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: ">=1.20.0"
+  sdk: '>=2.17.1 <3.0.0'
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  connectivity_plus: ^3.0.4
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 flutter:
 
@@ -24,5 +27,7 @@ flutter:
         package: com.cr0manty.vpn_check
         pluginClass: VpnCheckPlugin
       ios:
+        pluginClass: VpnCheckPlugin
+      macos:
         pluginClass: VpnCheckPlugin
 

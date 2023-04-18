@@ -6,19 +6,30 @@ Get vpn active status for Android, iOS
 
 A simple usage example:
 
-```
+```dart
 import 'package:vpn_check/vpn_check.dart';
 
+final vpnChecker = VPNCheck();
 bool isVpnActive = false;
 
 try {
-    isVpnActive = await VPNCheck.isVpnActive;
+    isVpnActive = await vpnChecker.isVPNEnabled();
 } on VPNUnhandledException catch (e) {
-    print(e)
+    print(e);
 }
+
+vpnChecker.vpnActiveStream.listen((isActive) {
+  isVpnActive = isActive;
+  print('is vpn active: $isActive');
+},
+  cancelOnError: false,
+);
 ```
 ## Support Platform
 
 - [x] Android
-- [x] IOS
+- [x] iOS
+- [x] MacOS
+- [ ] Linux
+- [ ] Windows
 

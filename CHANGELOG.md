@@ -1,3 +1,8 @@
+## 0.2.0
+- Migrate to null safety
+- Add MacOS support
+- Add stream to listen VPN activity
+
 ## 0.1.1
 - Bump Kotlin version
 
