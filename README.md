@@ -1,6 +1,6 @@
 # vpn_check
 
-Get vpn active status for Android, iOS
+Get vpn active status for Android, iOS and MacOS
 
 ## Getting Started
 
@@ -30,6 +30,8 @@ vpnChecker.vpnActiveStream.listen((isActive) {
 - [x] Android
 - [x] iOS
 - [x] MacOS
+
+## Plans
 - [ ] Linux
 - [ ] Windows
 

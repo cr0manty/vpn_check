@@ -1,3 +1,6 @@
+## 0.2.1
+- fix README
+
 ## 0.2.0
 - Migrate to null safety
 - Add MacOS support
