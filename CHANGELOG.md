@@ -1,3 +1,6 @@
+## 0.2.3
+- fix: gradle backward compat
+
 ## 0.2.2
 - Update dependency, thanks @daadu
 
