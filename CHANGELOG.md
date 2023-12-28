@@ -1,3 +1,6 @@
+## 0.2.2
+- Update dependency, thanks @daadu
+
 ## 0.2.1
 - fix README
 
