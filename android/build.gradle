@@ -25,7 +25,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.cr0manty.vpn_check'
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.cr0manty.vpn_check'
+    }
 
     compileSdkVersion 33
 
