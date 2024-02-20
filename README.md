@@ -9,7 +9,7 @@ A simple usage example:
 ```dart
 import 'package:vpn_check/vpn_check.dart';
 
-final vpnChecker = VPNCheck();
+final vpnChecker = VPNChecker();
 bool isVpnActive = false;
 
 try {
@@ -24,6 +24,17 @@ vpnChecker.vpnActiveStream.listen((isActive) {
 },
   cancelOnError: false,
 );
+
+// You can also use widget builder
+  ...
+  VPNStatusBuilder(
+    builder: (BuildContext context, VPNStatus value) {
+      return Center(
+        child: Text('VPN status: ${value.name}'),
+      );
+    },
+  ),
+  ...
 ```
 ## Support Platform
 

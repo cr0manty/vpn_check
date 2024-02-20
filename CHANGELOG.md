@@ -1,3 +1,8 @@
+## 0.3.0
+- Add: Widget status builder
+- fix: possibility to create instance of deprecated class
+- Fix README
+
 ## 0.2.3
 - fix: gradle backward compat
 

@@ -63,16 +63,18 @@ class VPNChecker {
 
   /// Must be disposed to cancel subscriptions and stream
   Future<void> dispose() async {
-    _onConnectionChanged.cancel();
-    _vpnChangeController.close();
+    await _onConnectionChanged.cancel();
+    await _vpnChangeController.close();
   }
 }
 
 @Deprecated(
-  "Deprecated, will be remove in next version, "
+  "Deprecated, will be remove in next versions, "
   "use [VPNChecker] class instead",
 )
 class VPNCheck extends VPNChecker {
+  VPNCheck._();
+
   @Deprecated(
     "Deprecated, will be remove in next version, "
     "use [VPNChecker().isVPNEnabled()] instead",

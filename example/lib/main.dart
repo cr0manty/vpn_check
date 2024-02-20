@@ -26,8 +26,7 @@ class _MyAppState extends State<MyApp> {
       (isActive) {
         _isVpnActive = isActive;
 
-        if (mounted) ;
-        setState(() {});
+        if (mounted) setState(() {});
       },
       onError: (error, stack) {
         print(error);
@@ -53,16 +52,26 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('VPN Activity example app'),
+  Widget build(BuildContext context) => MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('VPN Activity example app'),
+          ),
+          body: Column(
+            children: [
+              Center(
+                child: Text('VPN active: $_isVpnActive\n'),
+              ),
+              const SizedBox(height: 50),
+              VPNStatusBuilder(
+                builder: (context, value) {
+                  return Center(
+                    child: Text('VPN status: ${value.name}'),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
-        body: Center(
-          child: Text('VPN active: $_isVpnActive\n'),
-        ),
-      ),
-    );
-  }
+      );
 }
