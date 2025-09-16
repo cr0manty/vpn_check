@@ -1,3 +1,6 @@
+## 0.3.1
+- Update dependency, thanks @daadu
+
 ## 0.3.0
 - Add: Widget status builder
 - fix: possibility to create instance of deprecated class

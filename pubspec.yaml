@@ -1,6 +1,6 @@
 name: vpn_check
 description: Plugin used for get vpn active status for Android, iOS and MacOS
-version: 0.3.0
+version: 0.3.1
 
 homepage: https://github.com/cr0manty/vpn_check
 
